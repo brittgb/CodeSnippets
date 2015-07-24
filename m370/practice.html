@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<title>My Awesome Page!</title>
+<meta charset="UTF-8" >
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	html{
+		background-color: #CCC;
+	}
+
+	body {
+		background-color: #fff;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		width: 80%;
+		max-width:1200px;
+		margin: 20px auto 0 auto; 
+	}
+
+	section {
+		background-color: orange;
+		overflow:auto;
+	}
+
+	div#box1 {
+		float: left;
+		width: 48.93617%;
+		background-color:pink;
+	}
+
+	div#box2 {
+		float: right;
+		width: 48.93617%;
+		background-color:yellow;
+	}
+
+	div.left {
+		float:left;
+		width: 47.826086%;
+		background-color: black;
+		color: white;
+		min-height: 300px;
+	}
+	div.right {
+		float: right;
+		width: 47.826086%;
+		background-color:#f1f1f1;
+		min-height: 300px;
+	}
+	footer {
+		clear:both;
+	}
+
+	/* TABLET LAYOUT */
+	@media all and (min-width:481px) and (max-width:1024px) {
+		body {
+			background color: cyan;
+		}
+		div#box1, div#box2 {
+			float:none;
+			background-color:red; 
+			width: 100%;
+			overflow:auto;
+		}
+
+	}
+
+	/* PHONE LAYOUT */
+	@media all and (max-width:480px) {
+		body {
+			background-color: purple;
+		}
+		div#box1, div#box2 {
+			float:none;
+			background-color:red; 
+			width: 100%;
+			overflow:auto;
+		}
+		div.left, div.right {
+			float:none;
+			background-color:green;
+			width:100%;
+			overflow:auto;
+		}
+	}
+
+</style>
+</head>
+
+<body>
+
+	<header>
+		<h1>This is my headline</h1>
+		<p>Lorem Ipsum la di dah! Lorem Ipsum la di dah! Lorem Ipsum la di dah! Lorem Ipsum la di dah! Lorem Ipsum la di dah! </p>
+
+	</header>
+
+	<section>
+		<div id="box1">
+			<div class="left">
+				<p>Box 1 - Left</p>
+			</div>
+			<div class="right">
+				<p>Box 2 - Right</p>
+			</div>
+		</div>
+		<div id= "box2">
+			<div class="left">
+				<p>Box 3 - Left</p>
+			</div>
+			<div class="right">
+				<p>Box 4 - Right</p>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<small>&copy; 2014, All Rights Reserved ~ Authored by Britt Barcroft <br />
+		<a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a></small>
+	</footer>
+
+</body>
+
+</html>

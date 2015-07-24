@@ -1,0 +1,105 @@
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background:#fff;
+		font-family:baskerville, palatino, 'palatino linotype', georgia, serif;
+	}
+	
+	header {
+		background:#4F483E;
+		color:#fff;
+	}
+
+	section {
+		border-bottom:1px solid #000;
+		text-align: justify;
+		}
+	
+	aside {
+		font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	}
+
+	footer {
+		background-color:#686D7B;
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		text-transform:uppercase;
+		text-align:center;
+		color:#fff;
+		clear:both;
+	}
+
+	.avatar {
+		width: 100px;
+		height: 100px;
+	}
+
+	nav ul li a.active:link {
+		color: red;
+	}
+
+	nav ul li a.active:visited {
+		color: red;
+	}
+
+	p.message {
+		color: red;
+	}
+
+
+	/* RESPONSIVE BREAK POINTS AND STYLES */
+	
+	/* DESKTOP Layout and Sizing */
+
+	@media all and (min-width:780px) {
+		body {
+			width:70%;
+			margin:auto;
+		}
+		
+		header {
+			padding:20px 10px 10px 10px; 
+		}
+
+		h2 {
+			padding:20px 0px 0px 25px;
+		}
+
+		p {
+				margin-bottom:1em;
+		}
+
+		section {
+				padding-bottom:1em;
+				float: left;
+				width: 64%;
+		}
+		
+		section:last-of-type {
+				border-bottom:none;
+		}
+		
+		aside {
+				float:right;
+				width:26%;
+				padding: 0px 2.5% 0px 2.5%;
+				font-size:90%;
+		}
+
+		article h2 {
+			font-size:2em;
+			margin-bottom:.20em;
+		}
+		
+		article p {
+			font-size:1.2em;
+		}
+
+
+		footer {
+				font-size:1.2em;
+				letter-spacing:.20em;
+				padding: 25px 0 15px 0;
+		}
+	}

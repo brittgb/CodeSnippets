@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>
+        This is a crappy little form that I used to test my script from A3 - part 1.  Depending on what information you enter it should tell you whether the book is a hot selling bargain or not.  
+    </p>
+    <form action="" method="post" id="theForm">
+        <fieldset>
+            <p>Enter your book information in the form below</p>
+			<div>
+                <label for="price" class="blocklabel">Price:</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <br />
+			<div>
+                <label for="pubYear" class="blocklabel">Year Published:</label>
+                <input type="text" name="pubYear" id="pubYear">
+            </div>
+            <br />
+            <div>
+                <p>Book Type:</p>
+            </div>
+            <div>
+                <input type="radio" name="binding" value="hardcover" id="hardcover" > 
+                <label for="hardcover">    hardcover</label>
+            </div>
+            <div>
+                <input type ="radio" name="binding" value="paperback" id="paperback" >
+                <label for="paperback">    paperback</label>
+            </div>
+            <br />
+            <div>
+                <label for="NYTBestSeller" class="blocklabel" >Check "yes" if NYT Best Seller:</label>
+                <input type="checkbox" name="NYTBestSeller" id="NYTBestSeller"> yes
+            </div>
+            <br />
+            <div>
+                <label for="seriesTitle" class="blocklabel">series title:</label>
+                <input type="text" name="seriesTitle" id="seriesTitle">
+            </div>
+			<div>
+                <input type="submit" value="check" id="submit">
+            </div>
+        </fieldset>
+    </form>
+    <p>
+        for easy checking, here is the script I used:
+        <br />
+        <br />
+        function check() { <br />
+            var price = document.getElementById('price').value;  //type is numeric <br />
+            var pubYear = document.getElementById('pubYear').value; // type is numeric <br />
+            var binding = (document.getElementById('hardcover').checked) ? 'hardcover' : 'paperback';  //type is string <br />
+            var NYTBestSeller = document.getElementById('NYTBestSeller').checked;  //type is boolean <br />
+            var seriesTitle = document.getElementById('seriesTitle').value;  //type is string <br />
+            <br />
+
+            if ( <br />
+                    (pubYear >= 2000) &&  <br />
+                    ((binding=="hardcover" && price < 25.00) || (binding=="paperback" && <br />price < 15.00)) && <br />
+                    (NYTBestSeller == true) && <br />
+                    (seriesTitle == "Food Network" || seriesTitle == "The Food Network") <br />
+                )<br />
+            { <br />
+                alert("This is a Food Network Hot Selling Bargain Book!"); <br />
+            } else { <br />
+                alert("This is NOT a Food Network Hot Selling Bargain Book!"); <br />
+            } <br />
+            <br />
+            return false; <br />
+        } <br />
+    </p>
+    <script src="js/a3part1.js"></script>
+</body>
+</html>

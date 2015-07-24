@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>A6 Part 1</title>
+</head>
+<body>
+<h1>A6 Part 1 Questions</h1>
+<h3>What four ways of creating event listeners are detailed in this chapter?  Which approach should you not use and why?  What are the pros and cons of the other three approaches?</h3>
+<p>
+	1. Inline event listeners - should not be used because it makes a mess of HTML, interspersing JS throughout.  It makes projects harder to manage and debug.  It can't aply progressive enhancement, and inline handling got developers into thinking that JS would always work, often undercutting standard functionality based upon this assumption. <br />
+	2. traditional approach - easy and works reliably on every browser released within the last decade.  Con: If you have a complicated project with multiple JS files/libraries, if any JavaScript code uses the traditional method it is possible that it will undo the event registrations that took place in other JS files. <br />
+	3.W3C event handling - improvement on both the previous methods because event assignations are done within JS code, not HTML.  Allows you to assign multiple event handlers to the same element.  W3C DOM Level 2 approach is logical and flexible, but it requires a bit more code than the traditional approach and doesn't work with IE prior to version 9. <br />
+	4.IE event handling - Not much different than W3C at first glance.
+</p>
+<h3>What method works in IE8 for registering event listeners?  And in IE9?</h3>
+<p>
+	IE8 - use Microsoft's version (window.attachEvent('onload', init);) or the traditional approach <br />
+	IE9- any approach will work.
+</p>
+<h3>What benefits are gained by creating a utility library, defined within a single global object?</h3>
+<p>
+	To avoid polluting the global namespace with functions that are used in many files.
+</p>
+<h3>What three events are triggered when a user clicks on an element?  Why can it be better to listen to just the mousedown event, instead of a click?</h3>
+<p>
+	When a user clicks on an element, at least three things take place: mousedown, click, mouseup. It can be better to listen to just the mousedown event because the click event is the combo of both mousedown and mouseup, meaning that it is more exacting than the other events (if a user clicks on an element but moves off before releasing the button it won't constitute a click).
+</p>
+<h3>What are the three most important keyboard events?</h3>
+<p>
+	keydown, keyup, keypress
+</p>
+<h3>What is the focus event? What is blur?</h3>
+<p>
+	Focus is triggered when an element receives the user's attention.  The blur event is the opposite, triggered when the user's attention has moved elsewhere in the browser.
+</p>
+<h3>When is a change event triggered?</h3>
+<p>
+	Form elements can trigger a change event when an element's value changes.  With check boxes, radio buttons, and select menus, change events occur when the element's value changes.  With text inputs and textareas, change events do not occur until after the element loses focus, assuming its value changed.
+</p>
+<h3>Why is it important to pair event listeners and to be mindful of the events being handled?</h3>
+<p>
+	It is important to pair events listeners to provide multiple ways for an event to be triggered depending upon the method of browser control a user is utilizing - making your website more accessible.  
+</p>
+<h3>What properties are used to see what element triggered an event?  What property stores the type of event that occurred?</h3>
+<p>
+	target and srcElement point to the HTML element that triggered the event.  The type property stores the type of event that just occurred.
+</p>
+<h3>How do you determine what key was pressed?  Which events do you need to listen for in order to reliably determine the pressed key?</h3>
+<p>
+	You can determine which key was pressed through the event object, using the keyCode and which properties.  Three keys have their own special event properties: shiftKey, ctrlKey, and altKey.
+</p>
+<h3>Why would you want to prevent the default event behavior?  How do you do so?</h3>
+<p>
+	In some situations you don't want the browser's default behavior to occur because JS is performing the necessary tasks, and this can be done be returning the value false from the event handler or using e.preventDefault();
+</p>
+<h3>What are the two phases that events go through and in what order?  Which phase is more important?</h3>
+<p>
+	The two phases events go through are capturing (first) and bubbling (2nd).  Bubbling is more important: the traditional method only listens during the bubbling phase, and IE prior to version 9 cannot be told to watch during capture.  Bubbling can help you catch events that might be missed otherwise.
+</p>
+<h3>How does event delegation differ from event binding?</h3>
+<p>
+	Event delegation is different from event binding in that an event handler is attached to a parent element, catching any events that bubble up from one of its children.  This can offer improved performance and streamlined code in situations where multiple elements should have the same event handler.  
+</p>
+</body>
+</html>

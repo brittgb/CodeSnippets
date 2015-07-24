@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+	</head>	
+		<body>
+			<h2>
+				What event should you almost always use to handle form submissions and why?
+			</h2>
+			<p>
+				You should almost always add a submit handler to the form itself, which is triggered when the user clicks on the submit button OR when the user presses Enter/Return (meaning it is the most reliable/accessible approach)
+			</p>
+			<h2>
+				Why should you always use a submit button (or image)?
+			</h2>
+			</p>
+				Because otherwise, users without JavaScript can't submit the form.
+			</p>
+			<h2>
+				What property do you use to fetch or set the value of a text input or text area?
+			</h2>
+			<P>
+				value
+			</P>
+			<h2>
+				How do you create linked select menus?
+			</h2>
+			<P>
+				Add a change event to the first select menu, in the event handler change the options of the second menu based upon the selected value in the first. 
+			</P>
+			<h2>
+				How do you confirm that a checkbox was checked?
+			</h2>
+			<P>
+				The state of any checkbox can be found by looking at its checked property, which will either be true or false using:
+			</P>
+			<P>
+				var which = document.getElementById('someCheckbox').checked;
+			</P>
+			<h2>
+				What code is required to find out which radio button was checked?
+			</h2>
+			<P>
+				Loop through all the buttons in a group to find the checked one:
+			</P>
+			<P>
+				var radios = document.getElementsByName('gender');
+			</P>
+			<P>
+				for (var i=0, count = radios.length; i < count; i++) {
+			</P>
+			<P>
+				//do something! }
+			</P>
+			<h2>
+				What JavaScript functions can be used to test a regular expression?
+			</h2>
+			<P>
+				Test(), exec(), search(), match()
+			</P>
+			<h2>
+				How do you match a literal character or string of characters?
+			</h2>
+			<P>
+				To find a literal character or string of characters within other words, you don't need to use any meta characters.
+				Or...use parenthesis to compare strings...in other words (abc) will match abc; or use indexOf() method to match an exact string.
+			</P>
+			<h2>
+				What are meta-characters?  How do you escape a meta-character?
+			</h2>
+			<P>
+				Meta characters are special symbols that have a meaning beyond their literal value.  To match any meta character, you will need to escape it with a backslash.
+			</P>
+			<h2>
+				What meta-character do you use to bind a pattern to the beginning of a string?  To the end?
+			</h2>
+			<P>
+				^ binds a pattern to the beginning, and $ to the end.
+			</P>
+			<h2>
+				How do you create sub patterns (aka groupings)?
+			</h2>
+			<P>
+				Parenthesis are used to group characters into more involved patterns
+			</P>
+			<h2>
+				What are the quantifiers?  How do you require 0 or 1 of a character or string? 0 or more?  1 or more? Precisely X occurrences? A range of occurrences? A minimum of occurrences?
+			</h2>
+			<p>
+				Quantifiers allow you to control the number of occurrences. 0 or 1 = ?, 0 or more = *, 1 or more = +, a precise amount is {x}, a range of occurrences is {x,y}, and a minimum of occurrences = {x,}
+			</p>
+			<h2>
+				What are character classes?
+			</h2>
+			<p>
+				Character classes are created by placing characters within square brackets, allowing you to match any one of a number of specified characters.  You can indicate a range using a dash, for example [a-z]. 
+			</p>
+			<h2> 
+				What meta-characters still have meaning within character classes?
+			</h2>
+			<p>
+				\, ^, -, ]
+			</p>
+			<h2>
+				What shortcut represents the “any digit” character class?  The “any white space” class? “Any word”? What shortcuts represent the opposite of these?
+			</h2>
+			<p>
+				Any digit = \d
+			</p>
+			<p>
+				any white space  = \s
+			</p>
+			<p>
+				any word = \w
+			</p>
+			<p>
+				opposites= \D, \S, \W
+			</p>
+		</body>
+</html>	

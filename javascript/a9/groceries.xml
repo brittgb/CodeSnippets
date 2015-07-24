@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<choices xml:lang="EN">
+	<item><label>Milk</label><value>milk</value></item>
+	<item><label>Kefir</label><value>kefir</value></item>
+	<item><label>Cheese</label><value>cheese</value></item>
+	<item><label>Eggs</label><value>eggs</value></item>
+	<item><label>Chicken</label><value>chicken</value></item>
+	<item><label>Oats</label><value>oats</value></item>
+	<item><label>Bread</label><value>bread</value></item>
+	<item><label>Crackers</label><value>crackers</value></item>
+	<item><label>Rice</label><value>rice</value></item>
+	<item><label>Corn Masa</label><value>corn masa</value></item>
+	<item><label>Potatoes</label><value>potatoes</value></item>
+	<item><label>Lettuce</label><value>lettuce</value></item>
+	<item><label>Broccoli</label><value>broccoli</value></item>
+	<item><label>Carrots</label><value>carrots</value></item>
+	<item><label>Sprouts</label><value>sprouts</value></item>
+	<item><label>Bell Peppers</label><value>bell peppers</value></item>
+	<item><label>Hot Peppers</label><value>hot peppers</value></item>
+	<item><label>Cabbage</label><value>cabbage</value></item>
+	<item><label>Celery</label><value>celery</value></item>
+	<item><label>Peanut Butter</label><value>peanut butter</value></item>
+	<item><label>Butter</label><value>butter</value></item>
+	<item><label>Olive Oil</label><value>olive oil</value></item>
+	<item><label>Sesame Oil</label><value>sesame oil</value></item>
+	<item><label>Soy Sauce</label><value>soy sauce</value></item>
+	<item><label>Bananas</label><value>bananas</value></item>
+	<item><label>Apples</label><value>apples</value></item>
+	<item><label>Grapes</label><value>grapes</value></item>
+	<item><label>Oranges</label><value>oranges</value></item>
+	<item><label>Orange Juice</label><value>orange juice</value></item>
+	<item><label>Blueberries</label><value>blueberries</value></item>
+	<item><label>Blackberries</label><value>blackberries</value></item>
+	<item><label>Cream</label><value>cream</value></item>
+	<item><label>Tea</label><value>tea</value></item>
+	<item><label>Coffee</label><value>coffee</value></item>
+	<item><label>Cereal</label><value>cereal</value></item>
+	<item><label>Jam</label><value>jam</value></item>
+	<item><label>Beans</label><value>beans</value></item>
+	<item><label>Lentils</label><value>lentils</value></item>
+	<item><label>Brussels Sprouts</label><value>brussels sprouts</value></item>
+	<item><label>Green Beans</label><value>green beans</value></item>
+	<item><label>Peas</label><value>peas</value></item>
+	<item><label>Corn</label><value>corn</value></item>
+	<item><label>Asparagus</label><value>asparagus</value></item>
+	<item><label>Cucumber</label><value>cucumber</value></item>
+	<item><label>Zucchini</label><value>zucchini</value></item>
+	<item><label>Squash</label><value>squash</value></item>
+	<item><label>Sugar</label><value>sugar</value></item>
+	<item><label>Flour</label><value>flour</value></item>
+	<item><label>Ice Cream</label><value>ice cream</value></item>
+	<item><label>Yogurt</label><value>yogurt</value></item>
+</choices>

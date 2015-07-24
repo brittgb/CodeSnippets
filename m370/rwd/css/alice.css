@@ -1,0 +1,266 @@
+/* ALICE - GLOBAL STYLES  */
+
+	* {
+		margin:0;
+		padding:0;
+	}
+	
+	/* html element is being used as background color for this layout (outside the wrapper when visible) */
+	html {
+       background:#D2B78F;
+	}
+	
+	/* body is being used as the wrapper of all content for this layout */
+	body {
+		background:#fff;
+		font-family:baskerville, palatino, 'palatino linotype', georgia, serif;
+	}
+	
+	header {
+		background:#4F483E;
+		color:#fff;
+	}
+
+		/* nav */
+.main {
+	margin: 20px 0;
+}
+.main ul {
+	margin: 0;
+	padding: 0;
+}
+.main li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline; /* ie7 */
+}
+.main a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #999;
+	line-height: 100%;
+}
+.main a:hover {
+	color: #000;
+}
+.main .current a {
+	background: #999;
+	color: #fff;
+	border-radius: 5px;
+}
+
+/* right nav */
+.main.right ul {
+	text-align: right;
+}
+
+/* center nav */
+.nav.center ul {
+	text-align: center;
+}
+	
+	h1,h2,h3,h4,h5,h6 {
+		font-weight:normal;
+	}
+	
+	h1 {
+		text-align:right;
+		font-variant:small-caps;
+	}
+	
+	h2.pageid {
+		color:#D2B78F;
+		position:relative;
+	}
+	
+	article {
+		text-align:justify;
+	}
+	
+	section {
+		border-bottom:1px solid #000;
+		}
+	
+	aside {
+		font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	}
+	
+	.author {
+		font-weight:bold;
+		text-align:right;
+	}
+	
+	footer {
+		background-color:#686D7B;
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		text-transform:uppercase;
+		text-align:center;
+		color:#fff;
+		clear:both;
+	}
+
+	
+	
+	
+    /* RESPONSIVE BREAK POINTS AND STYLES */
+	
+	/* DESKTOP Layout and Sizing */
+	@media all and (min-width:780px) {
+		body {
+			background:#fff;
+			width:80%;
+			margin:auto;
+		}
+		
+		header {
+			padding:20px 10px 10px 10px; /* T R B L */	
+		}
+		
+		h2.pageid {
+			padding:20px 0px 0px 25px;
+		}
+		
+		h1 {
+			font-size:3em;
+			font-variant:small-caps;
+			letter-spacing:.10em;
+			margin-right:10px;
+		}
+		
+		p {
+				margin-bottom:1em;
+		}
+		
+		article {
+				float:left;
+				width:64%;
+				padding-left:2.5%;
+		}
+		
+		article h2 {
+			font-size:2em;
+			margin-bottom:.20em;
+		}
+		
+		article p {
+			font-size:1.2em;
+		}
+		
+		section {
+				-webkit-column-count:2;
+				-moz-column-count:2;
+				-ie-column-count:2;
+				column-count:2;	
+				-webkit-column-gap:2em;
+				-moz-column-gap:2em;
+				-ie-column-gap:2em;
+				column-gap:2em;	
+				padding-bottom:1em;
+		}
+		
+		section:last-of-type {
+				border-bottom:none;
+		}
+		
+		aside {
+				float:right;
+				width:26%;
+				padding: 0px 2.5% 0px 2.5%;
+				font-size:90%;
+		}
+		
+		aside h2 {
+			 	font-size:1.2em;
+				margin-bottom:1em;
+		}
+		
+		footer {
+				font-size:1.2em;
+				letter-spacing:.20em;
+				padding: 25px 0 15px 0;
+		}
+	}
+
+		
+		
+		
+	/* TABLET Layout and Sizing */ 
+	@media all and (min-width:481px) and (max-width:779px) {
+		 body {
+			 background-color:yellow;
+			 width:90%;
+		}
+	} /* NOTE: Be sure to close this media query's declaration block correctly */
+	
+	
+	
+	/* PHONE Layout and Sizing */ 
+	@media all and (max-width:480px) {
+		body {
+			background-color:red;
+		}
+	} /* NOTE: Be sure to close this media query's declaration block correctly */
+
+
+	/* Mobile Nav Layout */
+
+	@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 40px;
+	}	
+	.nav ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* show only current <li> item */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* right nav */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* center nav */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+	
+}

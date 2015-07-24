@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+
+<head>
+
+	<title>Fun with Events</title>
+	<link rel="stylesheet" type="text/css" href="a6events.css" />
+	
+</head>
+
+<body>
+
+	<p>Click the following button to be welcomed to the page:</p>
+
+	<input type="button" id="pushbutton" value=" Be Welcomed! " />
+
+	<p>When you HOVER your mouse over the red box you should see a secret message.
+	When you remove your mouse, the message will go away again.</p>
+
+	<div id="wrap">
+		<div id="redbox"></div>
+
+		<div id="hidden">This is a hidden div which will only 
+			show up when the mouse is positioned over the red box to its left. 
+			It goes away when the mouse is removed.</div>
+	</div>
+
+	<br /><br />
+
+	<form>
+
+		<p>When you click or tab INTO any of the boxes below, they should immediately
+		change their contents to lowercase.</p>
+		
+		<p>When you tab or click OUTSIDE of the box, whatever is there will 
+		should be converted to UPPERCASE.</p>
+
+
+		<input type="text" id="ta1" name="ta1" value="DONALD DUCK"><br /><br />
+		<input type="text" id="ta2" name="ta2" value="PORKY PIG"><br /><br />
+		<input type="text" id="ta3" name="ta3" value="FOGHORN LEGHORN"><br /><br />
+
+	</form>
+
+<script src="js/a6events.js"></script>
+</body>
+
+</html>

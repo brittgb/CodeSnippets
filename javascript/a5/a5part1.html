@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 5 - part 1</title>
+</head>
+<body>
+	<h1>Assignment 5 part 1</h1>
+	<h3>
+		What is the syntax for defining your own functions?  How do you write a function that takes arguments?
+	</h3>
+	<p>
+		function functionName() { <br />
+			//Function body  <br />
+		}
+	</p>
+	<p>
+		function functionName(someVar) { <br />
+			// Function body. <br />
+			} <br />
+	</p>
+	<h3>
+		How can you validate the number and types of arguments passed to a function, and why is that necessary?
+	</h3>
+	<p>
+		No type checking is involved with function parameters, so you'd need to add your own type checking using typeof.  Book example:
+	</p>
+	<p>
+		function add(x,y) { <br />
+			if ( (typeof x == 'number') && (typeof y == 'number') ) { <br />
+				x + y; <br />
+			} <br />
+		} <br />
+	</p>
+	<p>
+		to check number of arguments:
+	</p>
+	<p>
+		function functionName (someVar, anotherVar, yetAnotherVar) { <br />
+			if (arguments.length == 3) { // Good to go <br />
+			} else { // Missing something! <br />
+			} <br />
+		} <br />
+	</p>
+	<p>
+		Validation is important because JavaScript is weakly typed, and even if you are expecting to receive numbers and the function is sent strings instead, it'll just perform concatenation of the two strings without error.  
+	</p>
+	<h3>
+		How do you establish a default parameter value?
+	</h3>
+	<p>
+		Function parameters in JavaScript cannot be set with a default value, but you can create something similar by adding a default value assignment within the function.
+	</p>
+	<p>
+		Function functionName (someVar) { <br />
+			if (typeof someVar == 'undefined') { <br />
+				someVar = 'default value'; <br />
+			} <br />
+		} <br />
+	</p>
+	<p>
+		This works because if a function has a parameter that is not passed a value when the function is called, that parameter will have a value of undefined.
+	</p>
+	<h3>
+		What does it mean to say that an argument is passed by value or by reference?  Which value types are passed in each way?
+	</h3>
+	<p>
+		Passing by value means that the actual variable in the function call is not passed to the function, but rather the variable's value is.  This means that changes to the simple value within the function have no impact on the variable outside of the function.  Arrays and objects, however, are passed by reference, meaning that the function does not receive the complex values but rather references to the original variables.  If you change that variables within the function, the variable outside of the function will also be changed.
+	</p>
+	<h3>
+		How does a function return a value?
+	</h3>
+	<p>
+		Function functionName() { <br />
+			return something; <br />
+		} <br />
+	</p>
+	<p>
+		**If a function has no return statement or uses return without a value, the function automatically returns the value undefined.  
+	</p>
+</body>
+</html>

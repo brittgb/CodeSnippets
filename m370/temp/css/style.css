@@ -1,0 +1,199 @@
+/* font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Shadows Into Light Two', cursive; 
+
+-moz-box-shadow: 0 0 10px #ccc; 
+-webkit-box-shadow: 0 0 10px #ccc; 
+box-shadow: 0 0 10px #ccc; 
+
+*/
+
+/* universal styles for all devices */
+
+	* {
+		margin:0;
+		padding:0;
+	}
+
+	html, body {
+		height: 100%;
+	}
+
+	header.top, nav {
+		width: 100%;
+	}
+
+	header.top {
+		background-color: #be574d;
+	}
+
+	.name {
+		font-family: 'Shadows Into Light Two', cursive;
+		font-size: 3em; 
+		color: #f2e2d2;
+		float: left;
+		margin: 15px 5px 0 5px;
+	}
+
+	.tagline {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 2em;
+		color: #f2e2d2;
+		margin: 35px 0 0 0;
+		float: left;
+	}
+
+	#mainheadergraphic {
+		display: block;
+		float: right;
+		height: 90%;
+		padding: 5px 50px 5px 5px;
+	}
+
+	body {
+	background-color: #f9fcfd;
+	}
+
+	header.page_title {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 2.2em;
+		font-weight: bold;
+		color: #534741;
+	}
+
+	h1, p {
+		color: #534741;
+	}
+
+	h1 {
+		font-family: 'Shadows Into Light Two', cursive;
+	}
+
+	p {
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+
+/* desktop nav styles */
+
+	nav {
+		margin: auto auto;
+		/*background-color: #108490; */
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav li {
+		margin: 5px 5px 10px 0;
+		padding: 0;
+		list-style: none;
+		display: inline-block;
+		*display:inline; /* ie7 */
+	}
+
+	nav a {
+		padding: 5px 10px 15px 10px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1em;
+		text-decoration: none;
+		color: #108490;
+	}
+
+	nav a:hover {
+		color: #534741;
+	}
+
+	nav a.small:hover {
+		background-image: url(../images/layout/underlinesmall.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	nav a.large:hover {
+		background-image: url(../images/layout/underlinelarge.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	nav a.xlarge:hover {
+		background-image: url(../images/layout/underlinexlarge.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+
+/* RESPONSIVE BREAK POINTS AND STYLES */
+	
+	/* DESKTOP Layout and Sizing */
+		@media all and (min-width:780px) {
+			header.top {
+				height: 100px;
+			}
+
+			body {
+				width: 100%;
+			}
+
+			.main_content {
+				width: 98%;
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				margin: 0 auto -100px;
+			}
+
+			.main_content header {
+				width: 100%;
+				margin: 1% 1%;
+			}
+
+			.left_column {
+				width: 62%;
+				float: left;
+				margin: 1% 2%;
+			}
+
+			aside {
+				width: 32%;
+				margin: auto 1%;
+				background-color: ; 
+				float: right;
+			}
+
+			aside article {
+				background-color: ;
+				margin: 2%;
+				padding: 2%;
+			}
+
+			aside section {
+				margin: 2% 2%;
+				padding: 2%;
+				background-color: ;
+				border-bottom: 2px solid #534741;
+			}
+
+			.push {
+				height: 100px;
+			}
+
+			footer {
+				background-color: #108490;
+				clear: both;
+				height: 100px;
+			}
+
+		}
+	
+
+	/* PHONE Layout and Sizing */ 
+		@media all and (max-width:480px) {
+			body {
+				background-color:red;
+			}
+		} 
+
+
+	/* Mobile Nav Layout */

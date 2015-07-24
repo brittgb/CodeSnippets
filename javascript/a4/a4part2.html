@@ -1,0 +1,58 @@
+<html>
+<head>
+<script>
+
+window.onload = init;
+
+function init() {
+
+	var output = "";
+
+	// arrays of book data.  the first book is represented by the
+	// first element within each array, the second book by the second
+	// element within each array, etc.  
+
+	var title = ["Barbecuing in the Rain","Picnicing in the Arctic",
+		"How to Saute on a Radiator", "A Real Grasshopper: Bartending with Insects",
+		"Food with a Bullet:  Cooking in Camden", "Mirepoix for Dummies"];
+	var price = [18.50, 23.95, 41.95, 5.95, 13.00, 99.00];
+	var binding = ["Hardcover", "Paperback", "Hardcover", "Paperback", "Paperback", "Hardcover"];
+	var pubYear = [2002, 1975, 2004, 2006, 2001, 1997];
+	var NYTBestSeller = [true, true, false, false, true, true]
+	var seriesTitle = ["Food Network", "The Food Network", 
+		"Culinary Shortcuts", "Sunset Libations", 
+		"Food Network", "The Food Network"];
+		
+	for (i=0; i<title.length; i++)
+	{
+		// only print books published 2000 or later
+		// that are bestsellers:
+
+		output += "<hr />";
+		output += "TITLE: " + title[i] + "<br />";
+		output += "PRICE:  $" + price[i] + "<br />";
+		output += "BINDING: " + binding[i] + "<br />";
+		output += "PUB YR: " + pubYear[i] + "<br />";
+		output += "BESTSELLER: " + NYTBestSeller[i] + "<br />";
+		output += "SERIES: " + seriesTitle[i] + "<br />";
+		
+		if ((pubYear[i] >= 2000) && 
+			((binding[i]=="Hardcover" && price[i] < 25.00) || (binding[i]=="Paperback" && price[i] < 15.00)) && 
+			(NYTBestSeller[i] == true) && 
+			(seriesTitle[i] == "Food Network" || seriesTitle[i] == "The Food Network")) {
+
+		output += "<strong> Food Network Hot-Selling Bargain Book </strong> <br />" ;
+		}
+	}
+	document.getElementById("results").innerHTML = output;
+	
+}
+
+		
+</script>
+</head>
+<body>
+<div id="results"></div>
+</body>
+</html>
+

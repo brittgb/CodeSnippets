@@ -1,0 +1,40 @@
+
+#pushbutton {
+	color:purple;
+	font-weight:bold;
+	font-size:16px;
+	background:#FFFFCC;
+	border:2px solid blue;
+	cursor:pointer;
+}
+
+#redbox {
+	background:red;
+	height:50px;
+	width:50px;
+	cursor:pointer;
+	display:block;
+}
+
+#wrap {
+	position:relative;
+}
+
+#hidden {
+	position:absolute;
+	top:0px;
+	left:50px;
+	border:1px solid green;
+	padding:5px;
+	color:blue;
+	background:#EEFFEE;
+	width:150px;
+	height:150px;
+	display:none;
+}
+
+LABEL:hover {
+	cursor:pointer;
+	text-decoration:underline;
+}
+

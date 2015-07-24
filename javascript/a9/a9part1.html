@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+	</head>	
+		<body>
+			<h1>ITA 341 - Assignment 9</h1>
+
+			<h3>How do you create an Ajax object?</h3>
+			<p>
+				var ajax; <br />
+				if (window.XMLHttpRequest; { <br />
+				ajax = new XMLHttpRequest(); <br />
+				} else if (window.ActiveXObject) { // Older IE <br />
+				ajax = new ActiveXObject('MSXML2.XMLHTTP.3.0') <br />
+				}
+			</p>
+
+			<h3>What are the arguments to the open() method?</h3>
+			<p>type of request, URL of the server resource, and the value true</p>
+
+			<h3>When should you make GET requests and when should you make POST requests?</h3>
+			<p>GET is the standard method, and the type of request a browser makes when you click on a link.  GET requests are best used to fetch data, and POST requests are intended to cause a server change or reaction.</p>
+
+			<h3>Why is it critical to load an HTML page through a URL when the JavaScript will be making an Ajax request?</h3>
+			<p>ajax requests must be made through a server in order to work.</p>
+
+			<h3>What is the difference between an asynchronous request and a synchronous one?</h3>
+			<p>During asynchronous requests, other JavaScript code can be executed, such as that handling other events, whil the JavaScript awaits the server response.  </p>
+
+			<h3>What is the significance of the readyState property? What readyState value is most important?</h3>
+			<p>Once an asynchoronous Ajax request has been made, the function assigned to the onreadystatechange property of the Ajax object will be called whenever the object's readyState property changes. </p>
+
+			<h3>What two properties should you check to confirm that it's time to handle the server response (and what values should those properties have)?</h3>
+			<p>onreadystatechange = value should be 4 (meaning the process has been completed and page can make use of the results), and status = value should be 200 (meaning the resource was found and able to be loaded)</p>
+
+
+			<h3>How do you send data as part of the reqest?  Note: There are multiple answers.</h3>
+			<p>1. append the data to the URL. 2. provide data as the lone argument to the send() method (in place of null). 3. create a FormData object.</p>
+
+			<h3>What Ajax debugging techniques should you deploy when you have problems with Ajax?</h3>
+			<p>1. test the server-side resource to confirm the data being sent back to the JavaScript.  2. debug Ajax processis using a network monitor to verify that a request was made, show what data was transmitted, and show what data was returned.  **It might also be helpful to temporarily disable the cache feature in your browser!</p>
+
+			<h3>What is caching and how does it affect Ajax processes?</h3>
+			<p>Caching is used to improve performance by downloading resources whenever possible.  This includes everything from images to CSS to JS to HTML.  This means that the browser will attempt to cache the results of the Ajax request, which means changes made to the server-side resource won't immediately be reflected and make debugging harder.  </p>
+
+			<h3>How do you handle XML data using JavaScript? How do you handle JSON data?</h3>
+			<p>XML: Get a reference to the response (var data = ajax.responseXML;) and use documentElement to access the root, then first-Child, nextSibling, childNodes, etc.This works because all returned XML data will be represented in JS as a DOM tree.  JSON - all you have to do is parse it into JS code.</p>
+
+			<h3>How do you write a PHP script that just returns plain text: What about XML: JSON?</h3>
+			<p>
+			Plain text: have PHP print whatever text should be sent back to the JS. XML: send a content-type header to indicate that XML data is to follow. Then, create a root element. return it by just printing it out.  JSON: start by sending the apropriate content-typer header and then print the data.  
+			</p>
+
+			<h3>How do you repeatedly perform an Ajax request, every minute or some other interval? How do you delay performing an Ajax request?</h3>
+			<p>use setInterval, which works in milliseconds (so performing a request every minute would be 60000 milliseconds. To delay a request, use setTimeout.</p>
+
+		</body>
+</html>	

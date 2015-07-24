@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+	</head>	
+		<body>
+			<h1>Assignment 2, Part 1: Review Questions</h1>
+			<p>
+				<strong> How do you declare a variable? </strong> A variable is declared by using the var keyword.  For example, you could say:
+				<br />
+				 var fullName; 
+				 <br />
+				 or... 
+				 <br />
+				 var fullName = 'Brittany Barcroft';
+			</p>
+			<p>
+				<strong> What is variable scope? </strong> A variable's scope is the range in which it exists.  In JavaScript, variables can be declare at a function-level or globally.  Any variable that is used without first declaring it with var will automatically become a global variable, which means it applies to all functions within a program (and can cause errors).
+			</p>
+			<p>
+				<strong> What are the rules for a viarable's name? </strong> A variable name should start with a letter, underscore, or $.  The rest of the name can be a combination of letters, numbers, and underscores.  Names are case sensitive.  
+			</p>
+			<p>
+				<strong> What is the assignment operator? </strong> The assignment operator is =, which is used to assign a value to a variable.  For example:
+				<br />
+				var score = 95;
+				<br />
+				If you would like to indicate equality, you can do so by using == or !=.  In JavaScript and other languages, a single equal sign (=) does not mean two things are equivalent.
+			</p>
+			<p>
+				<strong> What simple types were introduced in this chapter? </strong>  In this chapter we were introduced to numbers, strings (a sequence of characters), and booleans (true/false).
+			</p>
+			<p>
+				<strong> How can you use a single quotation mark within a string? A double quotation mark? </strong> If your string is quoted with single quotations marks, you can use double quotes within the string and be ok.  The reverse is also true.  However, if your string is contained within double quotes and you'd also like to use double quotes within the string, you can use an escape sequence by prefacing each quotation mark within the string with a backslash.  For example:
+				<br />
+				var catspeak = "kitty cat says \"meow\"";
+			</p>
+			<p>
+				<strong> What does the *= operator do?  How about +=? (There are two answers to this last question.) And what about ++? </strong> *= is an assignment operator, += is also an assignment operator plus the concatination operator for strings, and ++ is the increment operator.  For *=, x*=y is the same thing as x=x*y and for +=, x+=y is the same thing as x=x+y.  The increment operator (++) adds one to the value of a variable.
+			</p>
+			<p>
+				<strong> What operator can cause bugs when used with a string and a number together? </strong>  The assignment operator can cause bugs because it is also the concatentation operator, and instead of adding two numbers you might accidentally concatenate something onto a number.  
+			</p>
+			<p>
+				<strong> What does the toFixed() method do? </strong> The toFixed() method returns a number with the amount of places to the right of the decimal that you specify.  For example:
+				<br />
+				var num = 4095.3892;
+				<br />
+				num.toFixed(3); // 4095.389
+				<br />
+				One thing to keep in mind is that toFixed() only formats the specified number but does not change the variable to the rounded number.  If you are going to use the variable later on it will still be assigned to the original unrounded number.
+			</p>
+			<p>
+				<strong>What are some of the differences between Number objects and the Math object?</strong>To use a number object it must first be declared, but with Math you do not neet to create a variable and can work with the object directly.  Math is a global object for JavaScript, so it is always available for your use.  Math uses predefined constants instead of variables.
+			</p>
+			<p>
+				<strong>What is an empty string?</strong> An empty string is a string without characters in it, which can be represented by "" or "
+			</p>
+			<p>
+				<strong>What does the charAt() method do?  What does indexOf() do?  How about lastIndexOf()? What are the arguments to the indexOf() and lastIndexOf() methods?  What happens when you use negative numbers for the second argument to either method?</strong> charAt() allows you to point to a specific character within a string. if var name = 'brittany', name.charAt(3) tells the program to return the 3rd character in the sequence (but remember to start from 0 and not 1).  In this case, JavaScript would return t.  indexOf() allows you to specify a character that you would like to look for within the string, and would return the position where the character is first found.  lastIndexOf() is similar, but it starts from the end of a string instead of the beginning and counts backwards.  The arguments to indexOf() and lastIndexOf() are a character or word to search for, and the optional second optional argument which provides a location to begin searching from in the string.  If you use negative numbers for the second argument, It will start at the position you choose but find it by counting backwards from the end.  
+			</p>
+			<p>
+				<strong>What function should you use to pull a substring out of a string and how do you use it?</strong> You should use the slice() method to pull a substring out of a string, but remember that it will not affect the original string and only returns a new string.  The slice() method has two arguments, that state which position to begin and end with.  for example:
+				<br />
+				var language = 'JavaScript';
+				<br />
+				language.slice(4); //Script
+				<br />
+				language.slice(0,4); //Java
+			</p>
+			<p>
+				<strong>What are the various ways you can perform concatenation with strings?</strong> Concatenation can be performed using the concatentation operator (+=) or the concat() method, although += is used more often.
+			</p>
+			<p>
+				<strong>What are escape sequences?</strong> Escape sequences allow you to parse strings literals for special characters/formatting.  This includes the backslash escape to be used with quotations within a string, as well as \n for a new line, \r for a carriage return, or \\ for a literal backslash.
+			</p>
+			<p>
+				<strong>What are some of the ways you can convert a string to a number?</strong> A string can be converted to a number with parseFloat() and parseInt(), or by prepending it with a +, for example:
+				<br />
+				total += +shipping; or...
+				<br />
+				total += +(shipping);
+			</p>
+		</body>
+
+</html>	

@@ -1,0 +1,375 @@
+/*** universal styles ***/
+	* {
+		margin:0;
+		padding:0;
+	}
+
+	html, body {
+		height: 100%;
+		min-height: 100%;
+	}
+
+	/*** Site Banner Styles ***/
+
+		.site_banner {
+			margin-bottom: -6.5px; /* take gap away between header and navigation */
+			background-color: #383A48;
+			color: #f2e2d2;
+			font-family: "EB Garamond";
+			text-align: center;
+			padding: 1%;
+		}
+
+		.name {
+			float: center;
+			display: inline-block;
+			vertical-align: 65%;
+		}
+
+		a:link {
+			text-decoration: none;
+			color: #f2e2d2;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: #f2e2d2;
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: #f2e2d2;
+		}
+
+		.site_banner, footer {
+			background-image: url(../images/header.png);
+		
+		}
+		
+	/*** nav top and nav bottom (copywrite and disclaimer) styles ***/
+
+		nav, .bottom_nav {
+			width: 100%;
+			background: black;
+			/* add semi-transparancy */
+			filter: alpha(opacity=60);
+			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+			opacity: 0.60;
+			-moz-opacity: 0.60;
+		}
+
+		.bottom_nav ul li {
+			float: right;
+		}
+
+		.copywrite {
+			float: left;
+		}
+
+		nav ul li, .bottom_nav ul li, .copywrite{
+			list-style: none;
+			display:inline-block;
+		}
+
+		nav, nav a, .bottom_nav, .bottom_nav a {
+			color: #f2e2d2;
+			font-family: 'Bad Script', sans-serif;
+			text-decoration: none;
+			text-align: center;
+		}
+		
+		.bottom_nav a {
+			padding: 0 10px;
+		}
+
+		nav a:hover, .bottom_nav a:hover {
+			color: #f19d63;
+		}
+
+		.bottom_nav, .nav_push  { 
+			height: 40px;
+			clear: both;
+			margin-top: -40px;
+		}
+
+		.nav_wrapper {
+			min-height: 100%;
+			height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+			height: 100%;
+			margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
+		}
+
+
+	/*** main page styles ***/
+
+		.main_background {
+			height: 100%;
+			min-height: 850px;
+			background-image: url(../images/mountaintop_background.jpg);
+			/* resize image to fit the whole page - does not harm dimension ratios */
+				background-repeat: no-repeat;
+				background-position: center;
+				-webkit-background-size: cover; 
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+		}
+
+		/* split the main content text and background into two divs with a container to allow the
+		background to be made semi-transparant in CSS without affecting the text */
+
+			.main_content {
+				position: relative;
+			}
+
+			.main_content .background {
+				margin: 1% 10%;
+				width: 80%;
+				height: 90%;
+				position: absolute;
+				z-index: 1; /* position the background behind the text */
+				background: black;
+				border: 2px solid white;
+				/* create semi-transparant background */
+					filter: alpha(opacity=80);
+					filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+					opacity: 0.80;
+					-moz-opacity: 0.80;
+				/* rounded corners */
+					-webkit-border-radius: 20px;
+					-moz-border-radius: 20px;
+					border-radius: 20px;
+			}
+
+			.main_content .text {
+				margin: 10% auto 10% auto;
+				padding: 1em;
+				width: 70%;
+				height: 80%;
+				position: relative;
+				z-index: 5;
+				color: #C4B7AA;
+				font-size: 1.2em;
+				font-family: 'EB Garamond', sans-serif;
+			}
+
+		h2, h3 {
+			color: #f19d63;
+			font-family: 'EB Garamond', sans-serif;
+	
+		}
+
+		/** resume page styles **/
+
+		.downloads {
+			display: block;
+			width: 200px;
+			padding: 10px;
+			text-align: center;
+			background-color: lightgrey;
+				/* rounded corners */
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;
+		}
+
+		.downloads a {
+			color: black;
+			font-size: 1em
+		}
+
+		/** work samples page styles **/
+
+		.work_sample a {
+			float: right;
+			margin-left: 3%;
+			margin-top: 1%;
+		}
+
+		.work_sample {
+			display: block;
+			clear: both;
+		}
+
+		
+
+	/*** footer styles ***/
+		footer, .push {
+			height: 100px;
+		}
+
+		.wrapper {
+			min-height: 100%;
+			height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+			height: 100%;
+			margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+		}
+
+
+/*** RESPONSIVE BREAK POINTS AND STYLES ***/
+	
+	/* WIDESCREEN DESKTOPS Layout and Sizing */
+		@media all and (min-width:1900px) {
+			footer, .push {
+				height: 200px;
+			}
+
+			.wrapper {
+				min-height: 100%;
+				height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+				height: 100%;
+				margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
+			}
+
+			.main_content {
+				width: 70%;
+				margin: auto;
+			}
+
+			.main_background {
+				min-height: 1200px;
+			}
+		}
+
+
+		@media all and (min-width:1440px) and (max-width: 1899px) {
+
+			.name {
+				font-size: 2.5em;
+			}
+
+			nav {
+				font-size: 1.5em;
+			}
+
+			nav a {
+				padding: 0 30px;
+			}
+
+			.main_content {
+				width: 80%;
+				margin: auto;
+			}
+
+			h2 {
+				font-size: 2.5em;
+			}
+
+			.bottom_nav {
+				font-size: 1.6em;
+			}
+
+			.main_background {
+				min-height: 1000px;
+			}
+
+		}
+
+
+	/* DESKTOP Layout and Sizing */
+		@media all and (min-width:841px) {
+
+			.name {
+				font-size: 2.5em;
+			}
+
+			nav {
+				font-size: 1.2em;
+			}
+
+			nav a {
+				padding: 0 20px;
+			}
+
+			h2 {
+				font-size: 2.5em;
+			}
+
+			.bottom_nav {
+				font-size: 1em;
+			}
+
+		}
+		
+
+	/* TABLET Layout and Sizing */ 
+		@media all and (min-width:531px) and (max-width:840px) {
+			.name {
+				font-size: 1.8em;
+				padding: 10px;
+			}
+
+			.logo {
+				display: none;
+			}
+
+			nav {
+				font-size: 1em;
+			}
+
+			nav a {
+				padding: 0 10px;
+			}
+
+			h2 {
+				font-size: 1.8em;
+			}
+
+			.bottom_nav a {
+				font-size: .7em;
+				padding: 0 3px;
+			}
+
+			.main_content .background {
+				height: 100%
+			}
+
+			.main_background {
+				background-image: url(../images/mountaintop_background.jpg);
+				height: 100%;
+				min-height: 1400px;
+			}
+
+		} 
+	
+
+	/* PHONE Layout and Sizing */ 
+		@media all and (max-width:530px) {
+			.name {
+				font-size: 1.3em;
+				padding: 5px;
+			}
+
+			.logo {
+				display: none;
+			}
+
+			h2 {
+				font-size: 1.6em;
+			}
+
+			.main_background {
+				background-image: url(../images/mountaintop_background.jpg);
+				height: 100%;
+				min-height: 1500px;
+			}
+
+			.main_content .background {
+				height: 100%;
+			}
+
+			.main_content .text {
+				font-size: 1em;
+				padding-left: 10%;
+			}
+
+			.bottom_nav {
+				display: none;
+			}
+
+			.resume {
+				display: none;
+			}
+
+						
+		}

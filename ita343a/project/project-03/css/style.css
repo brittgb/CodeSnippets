@@ -1,0 +1,79 @@
+<style type="text/css">
+            * {
+                    padding: 0;
+                    margin: 0;
+            }
+           
+            html {
+                    background-color: #ccc;
+            }
+           
+            h1, h2, h3, h4, h5, h6 {
+                    font-weight: normal;
+            }
+           
+            footer {
+                    text-align: center;
+                    font-size: 80%;
+            }
+           
+           
+    /* Responsive DESKTOP LAYOUT */
+           @media all and (min-width:780px) {
+            body {
+                    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                    width: 960px;
+                    margin: auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    min-height: 450px;
+            }
+           
+            img.me {
+                    float: right;
+                    display: inline-block;
+                    padding: 20px;
+            }
+           
+            ul, ol {
+                    margin-left: 30px;
+            }
+           
+            p {
+                    margin: 10px;
+            }
+           
+            h1, h2, h3, h4, h5, h6 {
+                    margin: 10px;
+            }
+           
+            h1.masthead {
+                    margin-top: 0;
+            }
+    }
+   
+   
+    /* Responsive TABLET LAYOUT  */
+            @media all and (min-width:481px) and (max-width:779px) {
+            body {
+                    background-color: red;
+            }
+           
+            img.me {
+                    float: right;
+                    width:33%;
+            }
+    }
+   
+   
+    /* Responsive PHONE LAYOUT  */
+           @media all and (max-width:480px) {
+            body {
+                    background-color: yellow;
+            }
+           
+            img.me {
+                    width:320px;
+            }
+    }
+</style>

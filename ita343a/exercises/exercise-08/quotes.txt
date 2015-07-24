@@ -1,0 +1,4 @@
+"Enter your","chris"
+"Enter your","christopher"
+"hello there, how are you?","Britt"
+"this is a sample quote","Example User"
